@@ -80,7 +80,7 @@ h2{font-size:clamp(26px,3vw,36px);letter-spacing:-1.2px;line-height:1.4;margin:0
 .deck:not(.open) .card{pointer-events:none}
 .deck-hint{margin:14px 0 0;text-align:center;font-size:12px;color:var(--muted)}
 .hint-touch{display:none}@media(hover:none){.hint-mouse{display:none}.hint-touch{display:inline}}.hint-open{display:none}.deck.open+.deck-hint .hint-open{display:inline}.deck.open+.deck-hint .hint-closed{display:none}
-.ig-foot{display:flex;gap:14px;padding:10px 2px 6px;color:var(--ink)}
+.ig-foot{display:flex;align-items:center;gap:18px;padding:12px 2px 8px;color:var(--ink)}
 .ig-foot span:last-child{margin-left:auto}
 .ig-cap{margin:0;font-size:14px}.ig-cap b{margin-right:6px}.ig-cap span{display:block;color:#3b6fb6;margin-top:4px}
 
@@ -107,16 +107,16 @@ h2{font-size:clamp(26px,3vw,36px);letter-spacing:-1.2px;line-height:1.4;margin:0
 .news-src{display:block;font-size:11px;font-weight:700;color:var(--warm)}
 .news-title{display:block;font-size:13px;font-weight:600;line-height:1.5;margin:2px 0 4px;color:var(--ink)}
 .news-url{display:block;font-size:11px;color:#3b6fb6;text-decoration:underline;text-underline-offset:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.like{appearance:none;border:0;background:none;padding:0;margin:0;cursor:pointer;color:var(--ink);display:flex}
+.like{appearance:none;border:0;background:none;padding:0;margin:0;cursor:pointer;color:var(--ink);display:flex;line-height:0}.ig-foot svg{display:block}
 .like svg{fill:none;stroke:currentColor;transition:fill .2s,stroke .2s}
 .like[aria-pressed="true"] svg{fill:#ed4956;stroke:#ed4956}
 .like.pop svg{animation:pop .35s ease}
 @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.3)}100%{transform:scale(1)}}
 .like:focus-visible{outline:3px solid var(--warm);outline-offset:3px;border-radius:4px}
 .ig-likes{margin:0 0 4px;font-size:13px}
-.like[aria-pressed="false"] svg{animation:beat 1.4s ease-in-out infinite;transform-origin:center}
+.like[aria-pressed="false"] svg{animation:blink 1.1s steps(1,end) infinite}
 .like[aria-pressed="false"]:hover svg{stroke:#ed4956}
-@keyframes beat{0%,40%,100%{transform:scale(1)}10%{transform:scale(1.22)}20%{transform:scale(1.02)}30%{transform:scale(1.16)}}
+@keyframes blink{0%{stroke:var(--ink)}50%{stroke:#ed4956}}
 @media(max-width:700px){.news a{padding:9px 10px}.news-title{font-size:12px}.news-url{white-space:normal;word-break:break-all;font-size:10.5px}}
 @media(prefers-reduced-motion:reduce){.like svg{animation:none!important}}
 
