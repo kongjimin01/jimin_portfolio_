@@ -123,3 +123,10 @@ h2{font-size:clamp(26px,3vw,36px);letter-spacing:-1.2px;line-height:1.4;margin:0
 .dot{background:var(--green)}.key.coin{width:10px;height:6px;border-radius:2px}
 .bars .b-t{font-size:10px;fill:var(--muted);font-family:var(--font)}.bars .b-v{font-size:10px;fill:var(--warm);font-weight:700;font-family:var(--font)}
 .pill-new{display:inline-block;margin-left:6px;font-size:10px;font-weight:800;letter-spacing:1px;color:#fff;background:var(--green);border-radius:20px;padding:1px 7px;vertical-align:2px}
+.hero-name{font-size:1.25em;letter-spacing:-1px}
+.lead{max-width:none}
+.bars .bar{transform-box:fill-box;transform-origin:left center;transform:scaleX(0)}
+.bars .bar-v{opacity:0}
+.bars.grow .bar{transform:scaleX(1);transition:transform var(--d) linear}
+.bars.grow .bar-v{opacity:1;transition:opacity .3s ease var(--d)}
+@media(prefers-reduced-motion:reduce){.bars .bar{transform:none}.bars .bar-v{opacity:1}}
