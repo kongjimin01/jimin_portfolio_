@@ -130,3 +130,4 @@ h2{font-size:clamp(26px,3vw,36px);letter-spacing:-1.2px;line-height:1.4;margin:0
 .bars.grow .bar{transform:scaleX(1);transition:transform var(--d) linear}
 .bars.grow .bar-v{opacity:1;transition:opacity .3s ease var(--d)}
 @media(prefers-reduced-motion:reduce){.bars .bar{transform:none}.bars .bar-v{opacity:1}}
+.map-link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}.map-link:hover{color:var(--warm);text-decoration-color:var(--warm)}
